@@ -3,15 +3,12 @@ services:
     name: mapa-de-vinculos
     runtime: node
     plan: free
-    buildCommand: |
-      npm install -g pnpm
-      pnpm install
-      cd apps/frontend && pnpm build && cd ../.. && cd apps/backend && pnpm build
+    buildCommand: npm install -g pnpm && pnpm install && cd apps/frontend && pnpm build && cd ../../apps/backend && pnpm build
     startCommand: cd apps/backend && node dist/index.js
     envVars:
       - key: DATABASE_URL
         sync: false
       - key: JWT_SECRET
         generateValue: true
-      - key: NODE_VERSION
-        value: "20"
+      - key: PORT
+        value: "10000"
