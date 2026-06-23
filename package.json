@@ -1,0 +1,12 @@
+{
+  "name": "mapa-de-vinculos",
+  "private": true,
+  "scripts": {
+    "dev:backend": "pnpm --filter @mapa/backend dev",
+    "dev:frontend": "pnpm --filter @mapa/frontend dev",
+    "build:backend": "pnpm --filter @mapa/backend build",
+    "build:frontend": "pnpm --filter @mapa/frontend build",
+    "db:push": "pnpm --filter @mapa/backend db:push",
+    "db:seed": "pnpm --filter @mapa/backend db:seed"
+  }
+}
